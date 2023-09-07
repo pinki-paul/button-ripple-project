@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightsalmon;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+     box-sizing: border-box;
+}
+
+.btn{
+    font-size: 26px;
+    background-color: chocolate;
+    color: aliceblue;
+    padding: 20px 35px;
+    border-radius: 6px;
+    box-shadow: 0 5px 9px rgba(0,0,0,0.3);
+    text-decoration: none;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+   box-sizing: border-box;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    height: 0;   /* height r width age 20px diyechilam pore transition lganor pore 0 kre diyechi*/
+    width: 0;
+    left: var(--xPosition);
+    top: var(--yPosition);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width .5s, height .5s;
+}
+.btn span{
+    position: relative;
+    z-index: 1;  /* button lkha ta jate color er opore ase tai jnno z-index 1 krechi r position relative krechi.*/
+}
+
+.btn:hover::before{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
